@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config>
+ 
+    <!-- Configuration de base du Module -->
+    <modules>
+        <Hhennes_CreditMemo>
+            <version>0.1.0</version>    
+        </Hhennes_CreditMemo>
+    </modules>
+ 
+    <!-- Configuration globale -->
+    <global>
+        <models>
+            <hhennes_creditmemo>
+                <class>Hhennes_CreditMemo_Model</class>    
+            </hhennes_creditmemo>
+        </models>
+        <helpers>
+            <hhennes_creditmemo>
+                <class>Hhennes_CreditMemo_Helper</class>    
+            </hhennes_creditmemo>
+        </helpers>
+        
+        <events>
+            <adminhtml_widget_container_html_before>
+                <observers>
+                    <add_creditmemo_buttons>
+                        <class>hhennes_creditmemo/observer</class>
+                        <method>addCreditMemoButtons</method>
+                    </add_creditmemo_buttons>
+                </observers>
+            </adminhtml_widget_container_html_before>
+        </events>
+    </global>
+    
+    <admin>
+        <routers>
+            <hhennes_creditmemo>
+                <use>admin</use>
+                <args>
+                    <module>Hhennes_CreditMemo</module>
+                    <frontName>hhennes_creditmemo</frontName>
+                </args>
+            </hhennes_creditmemo>
+        </routers>
+    </admin>
+ 
+</config>
