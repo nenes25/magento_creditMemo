@@ -31,10 +31,10 @@ class Hhennes_CreditMemo_Adminhtml_CreditMemoController extends Mage_Adminhtml_C
                 $this->_redirect('adminhtml/sales_creditmemo/view',array('creditmemo_id'=> $creditMemoId));
             }
 
-            Mage::getSingleton('adminhtml/session')->addSuccess('Credit Memo annule avec succes');
+            Mage::getSingleton('adminhtml/session')->addSuccess($this->__('Credit Memo successfully cancel'));
         }
         else {
-            Mage::getSingleton('adminhtml/session')->addError('Credit Memo deja annule');
+            Mage::getSingleton('adminhtml/session')->addError($this->__('Credit Memo already cancel'));
         }
 
         $this->_redirect('adminhtml/sales_creditmemo/view',array('creditmemo_id'=> $creditMemoId));
@@ -61,7 +61,7 @@ class Hhennes_CreditMemo_Adminhtml_CreditMemoController extends Mage_Adminhtml_C
             $this->_redirect('adminhtml/sales_creditmemo', array('creditmemo_id' => $creditMemoId));
         }
 
-        Mage::getSingleton('adminhtml/session')->addSuccess('Credit Memo supprimé avec succes');
+        Mage::getSingleton('adminhtml/session')->addSuccess($this->__('Credit Memo successfully deleted'));
         $this->_redirect('adminhtml/sales_creditmemo', array('creditmemo_id' => $creditMemoId));
     }
 
