@@ -4,7 +4,7 @@
     <!-- Configuration de base du Module -->
     <modules>
         <Hhennes_CreditMemo>
-            <version>0.1.0</version>    
+            <version>0.1.1</version>    
         </Hhennes_CreditMemo>
     </modules>
  
